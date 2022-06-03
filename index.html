@@ -1,0 +1,116 @@
+<!-- Alexander Carron - Date Here -->
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<!-- ! METADATA -->
+		<meta charset='UTF-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<meta name='author' content='Alexander Carron'>
+		<meta 
+			name='description' 
+			content='description'
+		>
+		<meta 
+			name='keywords' 
+			content='keyword'
+		>
+		
+		<!-- ! EXTERNAL FILES -->
+		<link rel='stylesheet' href='./styles/meyer-reset.css' type='text/css'>
+		<link rel='stylesheet' href='./styles/main.css' type='text/css'>
+		<script src='./scripts/script.js'></script>
+		
+		<title> Document </title>
+	</head>
+	
+	<body>
+
+		<!-- ^ VERTICAL BANNER -->
+		<section id="branding_banner">
+			
+			<div id="branding">
+				<img src="./media/images/LL_Extras_Logo.png" alt="LL Forms! Logo">
+				<p> LL Forms! </p>
+			</div>
+			
+			<p> 
+				Photo by <a href="https://unsplash.com/photos/_EMkxLdko9k" target="_blank">Filip Zrnzević</a> on <a href="https://unsplash.com" target="_blank">Upsplash</a> 
+			</p>
+			
+		</section>
+		
+		<!-- ^ SITE CONTENT -->
+		<section id="site_content">
+			<form action="" method="post">
+			
+				<!-- @ FORM INSTRUCTIONS -->
+				<div id="instructions">
+					<p> 
+						This isn't a real online service! You know you need something and what you need in to fill out this form. Sign up <em>now</em> to get started! 
+					</p>
+					<p>
+						You <em>know</em> you want to.
+					</p>
+				</div>
+				
+				<!-- @ FORM -->
+				<div id="form_section">
+					
+					<!-- ! HEADER -->
+					<div class="header">
+						<h2> Let's do this! </h2>
+					</div>
+					
+					<!-- ! FORM -->
+					<div id="form">
+							
+							<div class="column">
+								<div class="input">
+									<label for="first_name">First Name</label>
+									<input type="text" name="first_name" id="first_name">
+								</div>
+								
+								<div class="input">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email">
+								</div>
+								<strong></strong>
+								<div class="input">
+									<label for="password">Password</label>
+									<input type="password" name="password" id="password" onchange="checkConfirmPassword()">
+								</div>
+							</div>
+							<div class="column">
+								<div class="input">
+									<label for="last_name">Last Name</label>
+									<input type="text" name="last_name" id="last_name">
+								</div>
+								
+								<div class="input">
+									<label for="phone_num">Phone Number</label>
+									<input type="tel" name="phone_num" id="phone_num">
+								</div>
+								
+								<div class="input">
+									<label for="confirm_password">Confirm Password</label>
+									<input type="password" name="confirm_password" id="confirm_password"
+									onchange="checkConfirmPassword()">
+									<p class="invalid_text" id="confirm_password_invalid_text"> * Passwords do not match </p>
+								</div>
+							</div>
+					</div>
+				</div>
+				
+				<!-- @ BUTTONS -->
+				<div id="buttons">
+					<button type="submit" id="submit_button"> Create Account </button>
+					
+					<p> Already have an account? <a href="">Log in</a></p>
+				</div>
+				
+			</form>
+		</section>
+		
+	</body>
+</html>

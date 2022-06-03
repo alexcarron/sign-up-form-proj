@@ -1,0 +1,415 @@
+/* Alexander Carron - May 17th 2022 */
+:root {
+	--most-light-color: #FFFFFF;
+	--very-light-color: #E6E6E6;
+	--call-to-action-color: #ffbf00;
+	--bright-color: #2957c2;
+	--light-color: #3055aa;
+	--dark-color: #265471;
+	--very-dark-color: #343434;
+	--most-dark-color: #000000;
+}
+
+@font-face {
+	font-family: Coral-Colour;
+	src: url(../fonts/coral_colour.otf);
+}
+
+html {
+	background: var(--very-light-color);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/* ^ VERTICAL BANNER */
+section#branding_banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	height: 100vh;
+
+	background-image: url(../media/images/large_forest_portrait_filip_zrnzević.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+	
+	filter: brightness(150%);
+}
+	/* @ Branding Banner */
+	section#branding_banner>div#branding {
+		position: relative;
+		top: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		gap: 15px;
+		
+		background: #000000C0;
+		
+		height: max-content;
+		width: 100%;
+		padding: 10px 0;
+	}
+		/* ! Branding Banner Logo */
+		section#branding_banner>div#branding img {
+			width: 20%;	
+		}
+		
+		/* ! Branding Banner Text */
+		section#branding_banner>div#branding p {
+			font-family: Coral-Colour, sans-serif;
+			font-weight: bold;
+			font-size: 4vw;
+			
+			color: var(--most-light-color);
+		}
+		
+	/* @ Image Credit */
+	section#branding_banner>p {
+		margin: 15px;
+		margin-top: auto;
+		
+		color: var(--very-dark-color);
+	}
+		/* ! Links */
+		section#branding_banner>p a {
+			color: var(--very-dark-color);
+		}
+
+
+/* ^ SITE CONTENT */
+section#site_content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	
+	background: var(--very-light-color);
+	color: var(--most-dark-color);
+}
+
+	/* @ Form Instructions */
+	section#site_content div#instructions {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		
+		width: min(100%, 60em);
+		
+		gap: 30px;
+		padding: 50px 50px;
+		
+		font-weight: 600;
+		font-size: 26px;
+	}
+	
+	/* @ Form Section */
+	section#site_content div#form_section {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 30px;
+
+		padding: 30px 50px;
+		
+		background: var(--most-light-color);
+		box-shadow: 0 5px 10px #00000010;
+	}
+	
+		/* ! Form Section Header */
+		section#site_content div#form_section div.header {
+			font-size: 24px;
+			font-weight: 600;
+		}
+	
+		/* ! Form Section Form Controls */
+		section#site_content div#form_section div#form {
+			display: flex;
+			gap: 80px;
+			
+			width: 100%;
+		}
+	
+			/* & Form Section Form Control Columns */
+			section#site_content div#form_section div#form div.column {
+				display: flex;
+				flex-direction: column;
+				gap: 25px;
+				
+				width: min(100%, 260px);
+			}
+	
+				/* ~ Form Section Inputs */
+				section#site_content div#form_section div#form div.input{
+					display: flex;
+					flex-direction: column;
+				}
+	
+					/* ? Form Section Input Labels */
+					section#site_content div#form_section div#form label {
+						font-size: 14px;
+						font-weight: 550;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+						color: var(--very-dark-color);
+					}
+	
+					/* ? Form Section Text Inputs */
+					section#site_content div#form_section div#form input {
+						width: min(100%, 250px);
+						margin: 3px 0;
+						padding: 5px;
+						border: 2px #00000030 solid;
+						border-radius: 5px;
+						
+						font-size: 16px;
+						
+						transition: all 200ms ease;
+					}
+					
+					/* ? Form Section Invalid Text Inputs */
+					section#site_content div#form_section div#form input.invalid {
+						background: #FF000010;
+						border: 2px #b00000 solid;
+					}
+					
+					/* ? Form Section Text Inputs */
+					section#site_content div#form_section div#form input:focus {
+						box-shadow: 0 0px 5px #00000060;
+					}
+					
+					/* ? Form Section Invalid Text */
+					section#site_content div#form_section div#form p.invalid_text {
+						display: none;
+						
+						color: #b00000;
+					}
+	
+	/* @ Buttons Section */
+	section#site_content div#buttons {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 40px;
+
+		padding: 30px 50px;
+	}
+	
+		/* ! Submit Button */
+		section#site_content div#buttons button#submit_button {
+			background: var(--dark-color);
+			color: var(--very-light-color);
+			box-shadow: 0 0 10px #00000050;
+			
+			width: 200px;
+			padding: 15px;
+			border: none;
+			border-radius: 10px;
+			
+			font-size: 18px;
+			font-weight: 550;
+		}
+	
+		/* ! Log In Text */
+		section#site_content div#buttons p {
+			font-size: 18px;
+		}
+	
+			/* ! Log In Link */
+			section#site_content div#buttons a {
+				color: var(--dark-color);
+				font-weight: bold;
+				text-decoration: none;
+			}
+	
+	
+@media only screen and (max-width: 740px) {	
+	/* @ Form Instructions */
+	section#site_content div#instructions {
+		gap: 20px;
+		padding: 30px 30px;
+		font-size: 3.5vw;
+	}
+
+	/* @ Form Section */
+	section#site_content div#form_section {
+		gap: 20px;
+
+		padding: 20px 30px;
+	}
+
+		/* ! Form Section Header */
+		section#site_content div#form_section div.header {
+			font-size: 20px;
+		}
+
+		/* ! Form Section Form Controls */
+		section#site_content div#form_section div#form {
+			display: flex;
+			flex-direction: column;
+			
+			gap: 15px;
+		}
+
+			/* & Form Section Form Control Columns */
+			section#site_content div#form_section div#form div.column {
+				gap: 15px;
+				
+				width: 100%;
+			}
+
+					/* ? Form Section Input Labels */
+					section#site_content div#form_section div#form label {
+						font-size: 12px;
+					}
+
+					/* ? Form Section Text Inputs */
+					section#site_content div#form_section div#form input {
+						width: 100%;
+						font-size: 14px;
+					}
+	
+	/* @ Buttons Section */
+	section#site_content div#buttons {
+		gap: 10px;
+
+		padding: 20px 30px;
+	}
+	
+		/* ! Log In Text */
+		section#site_content div#buttons p {
+			font-size: 15px;
+		}
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	/* ^ VERTICAL BANNER */
+	section#branding_banner {
+		display: flex;
+		flex-direction: column;
+		
+		height: 150px;
+	}
+		/* @ Branding Banner */
+		section#branding_banner>div#branding {
+			position: static;
+			
+			height: 150px;
+			
+			background: #00000090;
+		}
+			/* ! Branding Banner Logo */
+			section#branding_banner>div#branding img {
+				width: 20%;	
+			}
+			
+			/* ! Branding Banner Text */
+			section#branding_banner>div#branding p {
+				font-family: Coral-Colour, sans-serif;
+				font-weight: bold;
+				font-size: 12vw;
+				
+				color: var(--most-light-color);
+			}
+			
+		/* @ Image Credit */
+		section#branding_banner>p {
+			display: none;
+		}
+		
+		
+	/* ^ SITE CONTENT */
+		/* @ Form Instructions */
+		section#site_content div#instructions {
+			align-items: center;
+			
+			gap: 20px;
+			padding: 30px 30px;
+			
+			font-weight: 600;
+			font-size: 20px;
+			text-align: center;
+		}
+		
+		/* @ Form Section */
+		section#site_content div#form_section {
+			align-items: center;
+			gap: 40px;
+
+			padding: 20px 30px;
+			
+			text-align: center;
+		}
+		
+			/* ! Form Section Header */
+			section#site_content div#form_section div.header {
+				font-size: 24px;
+				font-weight: 600;
+			}
+		
+			/* ! Form Section Form Controls */
+			section#site_content div#form_section div#form {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+			}
+		
+				/* & Form Section Form Control Columns */
+				section#site_content div#form_section div#form div.column {
+					gap: 15px;
+					
+					width: 100%;
+				}
+						/* ? Form Section Text Inputs */
+						section#site_content div#form_section div#form input {
+							width: 100%;
+							margin: 5px 0;
+						}
+	
+	/* @ Buttons Section */
+	section#site_content div#buttons {
+		align-items: center;
+		gap: 20px;
+
+		padding: 30px 30px;
+	}
+}
+			
+	
+/* * Font Styling */
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 800;
+}
+
+/* * Flex Templates */
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* * Grid Templates */
+.grid-contianer {
+	display: grid;
+}
