@@ -21,9 +21,9 @@ html {
 }
 
 body {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 2fr;
 }
 
 
@@ -33,7 +33,7 @@ section#branding_banner {
 	flex-direction: column;
 	align-items: center;
 	
-	height: 100vh;
+	height: 100%;
 
 	background-image: url(../media/images/large_forest_portrait_filip_zrnzević.jpg);
 	background-size: cover;
@@ -297,6 +297,7 @@ section#site_content {
 
 @media only screen and (max-width: 500px) {
 	body {
+		width: 100vw;
 		display: flex;
 		flex-direction: column;
 	}
@@ -306,6 +307,7 @@ section#site_content {
 		display: flex;
 		flex-direction: column;
 		
+		width: 100vw;
 		height: 150px;
 	}
 		/* @ Branding Banner */
