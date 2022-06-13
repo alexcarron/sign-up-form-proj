@@ -415,3 +415,16 @@ strong {
 .grid-contianer {
 	display: grid;
 }
+
+/* * Inputs */
+div.input{
+	display: flex;
+	flex-direction: column;
+}
+
+/* * Input Labels */
+label {
+	font-weight: 550;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
